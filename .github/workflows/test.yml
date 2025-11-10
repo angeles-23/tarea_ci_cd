@@ -16,6 +16,8 @@ jobs: #3
       uses: actions/setup-node@v1 #8 
       with: 
         node-version: '18.x' 
+    - name: Install Yarn
+      run: npm install -g yarn
     - name: Run Yarn #9 
       run: Yarn
     - name: Run tests
