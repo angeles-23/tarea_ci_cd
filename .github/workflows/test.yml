@@ -17,6 +17,8 @@ jobs: #3
       with: 
         node-version: '18.x' 
     - name: Run Yarn #9 
-      run: yarn 
-    - name: Run tests 
+      run: yarn
+    - name: Start server in background
+      run: yarn start &  # inicia el servidor sin modificar package.json
+    - name: Run tests
       run: yarn test
