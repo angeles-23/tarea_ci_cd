@@ -12,13 +12,14 @@ jobs: #3
     steps: #5 
     - name: Checkout repository #6  
       uses: actions/checkout@v2 #7 
+
     - name: Use Node.js 
       uses: actions/setup-node@v1 #8 
       with: 
         node-version: '18.x' 
-    - name: Install Yarn
-      run: npm install -g yarn
+        
     - name: Run Yarn #9 
-      run: Yarn
+      run: yarn
+      
     - name: Run tests
       run: yarn test
